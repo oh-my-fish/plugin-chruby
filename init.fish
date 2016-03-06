@@ -10,7 +10,7 @@
 set -q CHRUBY_ROOT; or set CHRUBY_ROOT /usr/local
 
 if test -f "$CHRUBY_ROOT/share/chruby/chruby.fish"
-  . "$CHRUBY_ROOT/share/chruby/chruby.fish"
+  source "$CHRUBY_ROOT/share/chruby/chruby.fish"
 else
   echo '`chruby` plugin loaded but chruby-fish not installed.' \
        'See: https://github.com/JeanMertz/chruby-fish'
@@ -19,5 +19,5 @@ end
 if test "$CHRUBY_AUTO_ENABLED" != "false" -a \
         -f "$CHRUBY_ROOT/share/chruby/auto.fish"
 
-  . "$CHRUBY_ROOT/share/chruby/auto.fish"
+  source "$CHRUBY_ROOT/share/chruby/auto.fish"
 end
